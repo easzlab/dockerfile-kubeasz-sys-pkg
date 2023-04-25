@@ -127,4 +127,4 @@ COPY --from=deb_jammy /tmp/*.tar.gz /packages/
 COPY --from=deb_stretch /tmp/*.tar.gz /packages/
 COPY --from=deb_buster /tmp/*.tar.gz /packages/
 
-CMD [ "sleep", "360000000" ]
+CMD [ "tail", "-f", "/dev/null" ]
