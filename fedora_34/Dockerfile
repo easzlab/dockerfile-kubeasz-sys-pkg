@@ -5,7 +5,7 @@
 
 FROM fedora:34 as downloader
 
-RUN yum install --downloadonly --downloaddir=/root/down \
+RUN yum install --downloadonly --downloaddir=/root/down -y \
       bash-completion \
       conntrack-tools \
       ipset \

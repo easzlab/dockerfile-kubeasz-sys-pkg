@@ -18,13 +18,14 @@ jobs:
 #          - dist: debian_11
 #          - dist: centos_7
           - dist: fedora_34
-          - dist: fedora_35
-          - dist: fedora_36
-          - dist: fedora_37
-          - dist: almalinux_8
-          - dist: almalinux_9
-          - dist: rocky_8
-          - dist: rocky_9
+#          - dist: fedora_35
+#          - dist: fedora_36
+#          - dist: fedora_37
+#          - dist: almalinux_8
+#          - dist: almalinux_9
+#          - dist: rocky_8
+#          - dist: rocky_9
+          - dist: opensuse_leap_15
     permissions:
       contents: read
       packages: write
