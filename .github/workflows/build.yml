@@ -10,13 +10,21 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - dist: ubuntu_16
-          - dist: ubuntu_18
-          - dist: ubuntu_20
-          - dist: ubuntu_22
-          - dist: debian_10
-          - dist: debian_11
-          - dist: centos_7
+#          - dist: ubuntu_16
+#          - dist: ubuntu_18
+#          - dist: ubuntu_20
+#          - dist: ubuntu_22
+#          - dist: debian_10
+#          - dist: debian_11
+#          - dist: centos_7
+          - dist: fedora_34
+          - dist: fedora_35
+          - dist: fedora_36
+          - dist: fedora_37
+          - dist: almalinux_8
+          - dist: almalinux_9
+          - dist: rocky_8
+          - dist: rocky_9
     permissions:
       contents: read
       packages: write
