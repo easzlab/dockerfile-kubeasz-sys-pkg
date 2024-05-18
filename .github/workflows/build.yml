@@ -10,14 +10,14 @@ jobs:
       fail-fast: false
       matrix:
         include:
-#          - dist: ubuntu_16
-#          - dist: ubuntu_18
-#          - dist: ubuntu_20
-#          - dist: ubuntu_22
-#          - dist: debian_10
-#          - dist: debian_11
-#          - dist: centos_7
-#          - dist: fedora_34
+          - dist: ubuntu_16
+          - dist: ubuntu_18
+          - dist: ubuntu_20
+          - dist: ubuntu_22
+          - dist: debian_10
+          - dist: debian_11
+          - dist: centos_7
+          - dist: fedora_34
           - dist: fedora_35
           - dist: fedora_36
           - dist: fedora_37
@@ -25,7 +25,7 @@ jobs:
           - dist: almalinux_9
           - dist: rocky_8
           - dist: rocky_9
-#          - dist: opensuse_leap_15
+          - dist: opensuse_leap_15
     permissions:
       contents: read
       packages: write
@@ -38,7 +38,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: "easzlab/kubeasz-sys-pkg"
-          tags: "1.0.0_${{ matrix.dist }}"
+          tags: "1.0.1_${{ matrix.dist }}"
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
