@@ -10,14 +10,12 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - dist: ubuntu_16
-          - dist: ubuntu_18
           - dist: ubuntu_20
           - dist: ubuntu_22
           - dist: ubuntu_24
           - dist: debian_10
           - dist: debian_11
-          - dist: centos_7
+          #- dist: centos_7 该镜像已经不更新
           - dist: fedora_34
           - dist: fedora_35
           - dist: fedora_36
@@ -39,7 +37,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: "easzlab/kubeasz-sys-pkg"
-          tags: "1.0.2_${{ matrix.dist }}"
+          tags: "1.0.3_${{ matrix.dist }}"
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
