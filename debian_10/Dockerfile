@@ -5,7 +5,10 @@
 
 FROM debian:10 as downloader
 
-RUN apt update && \
+RUN echo "deb http://archive.debian.org/debian buster main" > /etc/apt/sources.list && \
+    echo "deb http://archive.debian.org/debian-security buster/updates main" >> /etc/apt/sources.list && \
+    echo "deb http://archive.debian.org/debian buster-updates main" >> /etc/apt/sources.list && \
+    apt update && \
     apt install -d -y \
       conntrack \
       ipset \
