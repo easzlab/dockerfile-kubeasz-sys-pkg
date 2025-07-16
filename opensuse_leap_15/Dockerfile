@@ -13,6 +13,7 @@ RUN set -x && \
       ipset \
       ipvsadm \
       libseccomp2 \
+      lvm2 \
       nfs-client \
       rsync \
       socat && \

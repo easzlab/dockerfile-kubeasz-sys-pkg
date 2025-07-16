@@ -11,6 +11,7 @@ RUN yum install --downloadonly --downloaddir=/root/down \
       ipset \
       ipvsadm \
       libseccomp \
+      lvm2 \
       nfs-utils \
       rsync \
       socat && \

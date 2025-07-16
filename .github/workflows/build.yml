@@ -37,7 +37,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: "easzlab/kubeasz-sys-pkg"
-          tags: "1.0.3_${{ matrix.dist }}"
+          tags: "1.0.4_${{ matrix.dist }}"
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3

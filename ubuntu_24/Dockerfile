@@ -12,6 +12,7 @@ RUN apt update && \
       ipvsadm \
       jq \
       libseccomp2 \
+      lvm2 \
       nfs-common \
       rsync \
       socat && \
