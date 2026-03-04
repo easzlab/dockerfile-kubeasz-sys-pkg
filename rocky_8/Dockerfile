@@ -10,6 +10,7 @@ RUN yum install --downloadonly --downloaddir=/root/down -y \
       conntrack-tools \
       ipset \
       ipvsadm \
+      iptables \
       libseccomp \
       lvm2 \
       nfs-utils \
