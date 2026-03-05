@@ -9,11 +9,11 @@ if [ -n "$1" ]; then
 fi
 
 function docker_build() {
-    docker build -t $image -f Dockerfile $system
+    docker build -t $image -f $system/Dockerfile $system
 }
 
 function docker_run() {
-    docker run --rm --name $docker_name -it $image
+    docker run -d --rm --name $docker_name -it $image
 }
 
 function copy_file() {
