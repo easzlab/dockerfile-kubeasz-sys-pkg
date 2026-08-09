@@ -3,13 +3,14 @@
 # @repo:    https://github.com/easzlab/dockerfile-kubeasz-sys-pkg
 # @ref:     https://github.com/easzlab/kubeasz
 
-FROM ubuntu:16.04 as downloader
+FROM debian:12 as downloader
 
 RUN apt update && \
     apt install -d -y \
       conntrack \
       ipset \
       ipvsadm \
+      iptables \
       jq \
       libseccomp2 \
       lvm2 \
@@ -17,12 +18,12 @@ RUN apt update && \
       rsync \
       socat && \
     cd /var/cache/apt/archives && \
-    tar zcvf /tmp/ubuntu_16.tgz *.deb
+    tar zcvf /tmp/debian_12.tgz *.deb
 
 # storing packages on alpine
-FROM alpine:3.16
+FROM alpine:3.22
 
-ENV SYS_PKG_VER=1.0.1
+ENV SYS_PKG_VER=1.1.0
 
 COPY --from=downloader /tmp/*.tgz /packages/
 
