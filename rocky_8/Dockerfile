@@ -20,9 +20,9 @@ RUN yum install --downloadonly --downloaddir=/root/down -y \
     tar zcvf /tmp/rocky_8.tgz *.rpm
 
 # storing packages on alpine
-FROM alpine:3.16
+FROM alpine:3.22
 
-ENV SYS_PKG_VER=1.0.1
+ENV SYS_PKG_VER=1.1.1
 
 COPY --from=downloader /tmp/*.tgz /packages/
 

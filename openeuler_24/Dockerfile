@@ -3,7 +3,7 @@
 # @repo:    https://github.com/easzlab/dockerfile-kubeasz-sys-pkg
 # @ref:     https://github.com/easzlab/kubeasz
 
-FROM openeuler/openeuler:24.03-lts-sp2 as downloader
+FROM openeuler/openeuler:24.03-lts-sp4 as downloader
 
 RUN yum install --downloadonly --downloaddir=/root/down -y \
       bash-completion \
@@ -20,9 +20,9 @@ RUN yum install --downloadonly --downloaddir=/root/down -y \
     tar zcvf /tmp/openeuler_24.tgz *.rpm
 
 # storing packages on alpine
-FROM alpine:3.16
+FROM alpine:3.22
 
-ENV SYS_PKG_VER=1.0.1
+ENV SYS_PKG_VER=1.1.1
 
 COPY --from=downloader /tmp/*.tgz /packages/
 
